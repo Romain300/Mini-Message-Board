@@ -1,12 +1,23 @@
-<form method="POST" action="/new">
-    <div>
-        <label for="name">Name</label>
-        <input name="messageUser" id="name" type="text" required>
-    </div>
-
-    <div>
-        <label for="message">Message</label>
-        <input name="messageText" id="message" type="text" required>
-    </div>
-    <button type="submit">Send Message</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
+    <title>Form</title>
+</head>
+<body>
+    <form method="POST" action="/new">
+        <div class="input-form">
+            <label for="name">Name:</label>
+            <input name="messageUser" id="name" type="text" required>
+        </div>
+    
+        <div class="input-form">
+            <label for="message">Message:</label>
+            <input name="messageText" id="message" type="text" required>
+        </div>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>

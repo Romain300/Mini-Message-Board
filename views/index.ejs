@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles.css" rel="stylesheet">
     <title><%= title %></title>
 </head>
-<body>
-    <div>
-        <% messages.forEach((message) => { %>
-            <p> <%= message.user %> </p>
-            <p> <%= message.text %> </p>
-            <p> <%= message.added%> </p>
-            <button type="button">Details</button>
+<body> 
+    <div class="messages">
+        <% messages.forEach((message, index) => { %>
+            <div class="message">
+                <p> <%= message.user %> </p>
+                <p> <%= message.text %> </p>
+                <p> <%= message.added%> </p>
+                <a href="/<%= index %>"><button>Details</button></a>
+            </div>
         <% }) %>
-    </div>
+    </div> 
+    
+        
+    
 
     <a href="/new">Write Message</a>
 </body>
