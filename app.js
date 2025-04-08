@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
-const PORT = 4000;
+const PORT = process.env.POR || 4000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use("/new", newRouter);
