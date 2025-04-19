@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/styles.css" rel="stylesheet">
-    <title><%= idMessage %></title>
+    <title><%= message.id %></title>
 </head>
 <body>
     <div class="messages">
-        <div><%= message.user %></div>
-        <div><%= message.text %></div>
-        <div><%= message.added %></div>
+        <div><%= message.username %></div>
+        <div><%= message.message %></div>
+        <div><%= message.date %></div>
     </div> 
 </body>
 </html>
