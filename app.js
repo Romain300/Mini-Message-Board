@@ -20,7 +20,7 @@ app.use(express.static(assetsPath));
 const PORT = process.env.PORT || 4000;
 
 app.use(express.urlencoded({ extended: true }));
-// app.get("/favicon.ico", (req, res) => res.status(204)); 
+app.get("/favicon.ico", (req, res) => res.status(204)); 
 app.use("/new", newRouter);
 app.use("/", indexRouter);
 
