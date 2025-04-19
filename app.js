@@ -12,7 +12,7 @@ console.log("DATABASE_URL:", process.env.DATABASE_URL);
 console.log("PORT:", process.env.PORT || 4000);
 
 app.get("/", (req, res) => {
-    res.sendStatus(200);
+    res.send("Hello from Railway!");
   });
 
 app.set("views", path.join(__dirname, "views"));
@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 4000;
 app.use(express.urlencoded({ extended: true }));
 app.get("/favicon.ico", (req, res) => res.status(204)); 
 app.use("/new", newRouter);
-app.use("/app", indexRouter);
+// app.use("/app", indexRouter);
 
 
 app.listen(PORT, () => {
