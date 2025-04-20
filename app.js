@@ -22,7 +22,7 @@ const PORT = 4000;
 app.use(express.urlencoded({ extended: true }));
 app.get("/favicon.ico", (req, res) => res.status(204)); 
 app.use("/new", newRouter);
-app.use("/app", indexRouter);
+app.use("/", indexRouter);
 
 
 app.listen(PORT, () => {
@@ -31,16 +31,3 @@ app.listen(PORT, () => {
     console.error('Error while starting the server:', err);
 });
 
-
-// const express = require("express");
-// const app = express();
-
-// const PORT = 4000;
-
-// app.get("/", (req, res) => {
-//   res.send("Hello from Railway!");
-// });
-
-// app.listen(PORT, () => {
-//   console.log(`Listening on port ${PORT}`);
-// });
