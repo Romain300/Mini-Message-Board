@@ -17,7 +17,7 @@ app.set("view engine", "ejs");
 const assetsPath = path.join(__dirname, "public");
 app.use(express.static(assetsPath));
 
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 app.use(express.urlencoded({ extended: true }));
 app.get("/favicon.ico", (req, res) => res.status(204)); 
