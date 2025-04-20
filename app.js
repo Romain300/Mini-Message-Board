@@ -25,9 +25,7 @@ app.use("/new", newRouter);
 app.use("/", indexRouter);
 
 
-app.listen(PORT, () => {
-    console.log(`Currently listening on port ${PORT}`);
-}).on('error', (err) => {
-    console.error('Error while starting the server:', err);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Listening on port ${PORT}`);
 });
 
